@@ -36,7 +36,8 @@ nav span{
 
 /* banner styles */
 .banner,
-.information{
+.information,
+.thesisContent{
   border: 1px solid black;
   width: 100%;
   display: flex;
@@ -47,14 +48,14 @@ nav span{
 }
 
 .banner .img-container,
-.information .main-article{
+.main-article{
   width: 60%;
   margin: 32px 24px;
   border: 1px solid red;
 }
 
 .banner img,
-.information .main-article img,
+.main-article img,
 .side-item img{
   display: block;
   width: 100%;
@@ -63,7 +64,7 @@ nav span{
 }
 
 .banner .content,
-.information .side-bar{
+.side-bar{
   display: flex;
   width: 40%;
   flex-direction: column;
@@ -101,16 +102,17 @@ nav span{
   padding: 0 16px;
 }
 
-.side-item .content span{
+.side-item .content span,
+.gallery-item span{
   display: block;
 }
 
-.side-item:last-child{
+.information .side-item:last-child{
   border-top: grey 3px solid;
   background-color: grey;
 }
 
-.side-item:first-child{
+.information .side-item:first-child{
   border-bottom: grey 3px solid;
 }
 
@@ -122,4 +124,63 @@ nav span{
 .main-article .content,
 .side-bar .content{
   border: 1px green solid;
+}
+
+/* learning styles -- courses offered */
+.learning{
+  padding: 32px 56px;
+  background-color: grey;
+}
+
+.gallery-row{
+  display: flex;
+}
+
+.gallery-item{
+  width: 33%;
+  margin: 32px 16px 0 16px;
+  background-color: white;
+}
+
+.gallery-item .content{
+  margin: 16px 16px 24px 16px;
+  border: black solid 1px;
+}
+
+.gallery-item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+video{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.thesis h1{
+  width: 100%;
+}
+
+.thesis .side-bar{
+  justify-content: flex-start;
+  padding-top: 32px;
+}
+
+.thesis .side-item:first-child{
+  background-color: grey;
+}
+
+footer{
+  border: black solid 1px;
+  padding: 16px 24px 32px 24px;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.copyright{
+  flex-grow: 1;
+  border: black solid 1px;
 }
