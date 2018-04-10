@@ -1,14 +1,46 @@
 /* Global Styles */
+html{
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  color: #323233;
+}
 
+body{
+  /* background-color: #eee2dc; */
+}
+
+h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #323233;
+}
+
+h5{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #323233;
+}
+
+a{
+  text-decoration: none;
+  color: #323233;
+}
+
+@media only screen and (min-width: 481px) {
+  .mobile{display: none;}
+}
 
 /* Header Styles */
 header{
-  border: black solid 1px;
   height: 64px;
   padding: 0 24px;
   display: flex;
   flex-grow: 1;
   align-items: center;
+  font-weight: bold;
 }
 
 header img{
@@ -21,37 +53,50 @@ header img{
   flex-grow: 1;
   text-transform: uppercase;
   word-spacing: -0.175em;
-  border: black solid 1px;
 }
 
-nav{
-  border: black solid 1px;
+.logoText .colored{
+  color: #C0C0C2;
 }
 
 nav span{
   display: inline-block;
   margin-left: 16px;
-  border: black solid 1px;
 }
 
-/* banner styles */
+@media only screen and (max-width: 480px){
+  nav,
+  .logo{
+    display: none;
+  }
+
+  header{
+    padding: 0;
+  }
+
+  header .mobile{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
 .banner,
 .information,
 .thesisContent{
-  border: 1px solid black;
   width: 100%;
   display: flex;
 }
 
 .banner{
-  background-color: grey;
+  background-color: #C0C0C2;
 }
 
 .banner .img-container,
 .main-article{
   width: 60%;
   margin: 32px 24px;
-  border: 1px solid red;
 }
 
 .banner img,
@@ -60,7 +105,6 @@ nav span{
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid blue;
 }
 
 .banner .content,
@@ -69,20 +113,46 @@ nav span{
   width: 40%;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid black;
+}
+
+.banner h5{
+  margin: 32px 0;
 }
 
 .banner .btn{
   padding: 8px 0;
   width: 60%;
-  border: 1px solid black;
-  background-color: darkgrey;
+  background-color: #323233;
   text-align: center;
+  color: white;
 }
 
-/* information styles */
+@media only screen and (max-width: 480px){
+  .banner{
+    flex-wrap: wrap;
+  }
+
+  .banner .img-container{
+    width: 100%;
+    margin: 0;
+  }
+
+  .banner h5{
+    margin: 32px 0 24px 0;
+  }
+
+  .banner .content{
+    width: inherit;
+    margin: 32px 16px;
+  }
+
+  .banner .btn{
+    width: 100%;
+  }
+}
+
 .side-bar{
-  border-left: 1px grey solid;
+  border-left: 1px #C0C0C2 solid;
 }
 
 .side-bar .side-item{
@@ -94,7 +164,6 @@ nav span{
 .side-item .img-container{
   width: 35%;
   height: auto;
-  border: 1px red solid;
 }
 
 .side-bar .content{
@@ -108,28 +177,90 @@ nav span{
 }
 
 .information .side-item:last-child{
-  border-top: grey 3px solid;
-  background-color: grey;
+  border-top: #C0C0C2 3px solid;
+  background-color: #C0C0C2;
 }
 
 .information .side-item:first-child{
-  border-bottom: grey 3px solid;
+  border-bottom: #C0C0C2 3px solid;
 }
 
-.side-bar, h1, h5,
-.side-item{
-  border: black solid 1px;
+.information h1{
+  margin-top: 32px;
 }
 
-.main-article .content,
-.side-bar .content{
-  border: 1px green solid;
+.information p{
+  margin: 24px 0;
 }
 
-/* learning styles -- courses offered */
+.information .main-article .content span{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #323233;
+}
+
+.side-bar .content span,
+.learning span{
+  margin-top: 8px;
+  word-spacing: 0em;
+  line-height: 1.5;
+}
+
+.side-bar .content a{
+  color: #438DB3;
+}
+
+@media only screen and (max-width: 480px){
+  .desktop img,
+  .information .main-article{
+    display: none;
+  }
+
+  .information{
+    border-bottom: 1px #C0C0C2 solid;
+  }
+
+  .information .side-bar{
+    width: inherit;
+  }
+
+  .side-item .img-container,
+  .side-item .content{
+    width:inherit;
+  }
+
+  .information img{
+    margin-bottom: 16px;
+  }
+
+  .side-item{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .side-bar .side-item{
+    padding-bottom: 48px;
+  }
+
+  .information .side-item:last-child{
+    border-top: none;
+    background-color: white;
+    padding-bottom: 32px;
+  }
+
+  .information .side-item:first-child{
+    border-bottom: none;
+  }
+}
+
 .learning{
   padding: 32px 56px;
-  background-color: grey;
+  background-color: #C0C0C2;
+}
+
+.learning h1{
+  text-align: center;
 }
 
 .gallery-row{
@@ -144,7 +275,6 @@ nav span{
 
 .gallery-item .content{
   margin: 16px 16px 24px 16px;
-  border: black solid 1px;
 }
 
 .gallery-item img{
@@ -153,34 +283,99 @@ nav span{
   height: auto;
 }
 
+@media only screen and (max-width: 480px){
+  .gallery{
+    display: none;
+  }
+
+  .learning{
+    background-color: white;
+    padding:0;
+    margin: 32px 16px;
+  }
+
+  .learnlist{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .course{
+    margin-top: 8px;
+    padding: 16px 16px 24px 16px;
+    background-color: #C0C0C2;
+  }
+
+  .course:first-child{
+    margin-top: 16px;
+  }
+}
+
+
 video{
   width: 100%;
   height: auto;
   display: block;
 }
 
+.thesis .side-bar span,
+.thesis p{
+  line-height: 1.5;
+}
+
 .thesis h1{
   width: 100%;
+  text-align: center;
+  margin-top: 32px;
 }
 
 .thesis .side-bar{
   justify-content: flex-start;
   padding-top: 32px;
+  border: none;
+}
+
+.thesis .main-article h5{
+  margin-top: 24px;
+  margin-bottom: 8px;
 }
 
 .thesis .side-item:first-child{
-  background-color: grey;
+  background-color: #C0C0C2;
+}
+
+@media only screen and (max-width: 480px){
+    .thesis{
+      margin: 64px 0 24px 0;
+      border-top: 1px #C0C0C2 solid;
+    }
+
+    .thesis .content,
+    .thesis .side-bar{
+      display: none;
+    }
+
+    .main-article{
+      width: inherit;
+      margin: 16px 0 0 0;
+    }
 }
 
 footer{
-  border: black solid 1px;
+  border-top: #C0C0C2 solid 1px;
   padding: 16px 24px 32px 24px;
   display: flex;
   flex-grow: 1;
   align-items: center;
+  font-size: 12px;
 }
 
 .copyright{
   flex-grow: 1;
-  border: black solid 1px;
+}
+
+@media only screen and (max-width: 480px){
+    footer{
+      padding: 16px 24px;
+      border-top: none;
+    }
 }
